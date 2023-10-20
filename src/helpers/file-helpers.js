@@ -1,17 +1,13 @@
-import fs from 'fs';
-import path from 'path';
+//"use client";
+import fs from "fs";
+import path from "path";
 
 export function readFile(localPath) {
-  return fs.readFileSync(
-    path.join(process.cwd(), localPath),
-    'utf8'
-  );
+  return fs.readFileSync(path.join(process.cwd(), localPath), "utf8");
 }
 
 export function writeFile(localPath, content) {
-  return fs.writeFileSync(
-    path.join(process.cwd(), localPath),
-    content,
-    { encoding: 'utf8' }
-  );
+  return fs.writeFileSync(path.join(process.cwd(), localPath), content, {
+    encoding: "utf8",
+  });
 }

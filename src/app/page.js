@@ -1,12 +1,7 @@
-import React from 'react';
+//"use client";
+import React from "react";
 
-import {
-  readFile,
-  writeFile,
-} from '../helpers/file-helpers';
-
-const DATABASE_PATH = '/src/database.json';
-
+import HitCounter from "../components/HitCounter";
 /*
 `readFile` takes 1 argument:
 • the path to the file:
@@ -27,7 +22,9 @@ function Home() {
   return (
     <main>
       <h1>Welcome!</h1>
-      <p>You are visitor number X.</p>
+      <p>
+        You are visitor number <HitCounter></HitCounter>.
+      </p>
     </main>
   );
 }
